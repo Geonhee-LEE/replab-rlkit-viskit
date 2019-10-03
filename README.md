@@ -1,9 +1,5 @@
 ## Software 
 
-### Camera Setup 
-
-Before running the Docker image, the camera drivers for the SR300 Intel Realsense camera need to be set up. Detailed instructions for setting up the drivers can be found here. 
-
 ###  Docker Image 
 Pull our Docker image for operating a cell directly with:  
 ```
