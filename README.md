@@ -1,3 +1,27 @@
+## Software 
+
+### Camera Setup 
+
+Before running the Docker image, the camera drivers for the SR300 Intel Realsense camera need to be set up. Detailed instructions for setting up the drivers can be found here. 
+
+###  Docker Image 
+Pull our Docker image for operating a cell directly with:  
+```
+docker pull bhyang12/replab 
+```
+
+###  To run the image: 
+```
+docker run -it --rm --privileged bhyang12/replab 
+```
+If operating multiple rigs on one machine, you may need to manually specify which ports/devices the Docker container can access. As an example: 
+```
+docker run -it --rm --device=/dev/video0 --device=/dev/video1 --device=/dev/ttyUSB0 bhyang12/replab 
+```
+### To run with GPU and display port access (requires nvidia-docker 2), use: 
+```
+docker run --runtime=nvidia -e NVIDIA_DRIVER_CAPABILITIES=compute,utility -e NVIDIA_VISIBLE_DEVICES=all -it --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" --rm --privileged bhyang12/replab 
+```
 
 ## Reinforcement Learning on REPLAB
 
