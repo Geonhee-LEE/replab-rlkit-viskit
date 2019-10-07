@@ -1,5 +1,13 @@
 # rlkit
 
+## Test env
+```
+Python           3.5.2 
+mujoco-py        2.0.2.5 
+gym              0.10.5 
+torch            0.4.1      
+```
+
 Reinforcement learning framework and algorithms implemented in PyTorch.
 
 Some implemented algorithms:
