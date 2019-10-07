@@ -93,3 +93,9 @@ source activate rlkit
 
 python scripts/[POLICY_SCRIPT].py --[args specified in script] [path_to_params.pkl]
 ```
+
+# Usage viskit
+```
+python viskit/frontend.py path/to/dir
+```
+and connect on http://0.0.0.0:5000/ for visualization about training results
