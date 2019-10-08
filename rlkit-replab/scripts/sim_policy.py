@@ -2,15 +2,15 @@ from rlkit.samplers.util import rollout
 from rlkit.torch.core import PyTorchModule
 from rlkit.torch.pytorch_util import set_gpu_mode
 import argparse
-import joblib
-import uuid
+import joblib # For dist caching, parallel programming, model save, the component of Sklean
+import uuid # For Unique identifier
 from rlkit.core import logger
 
 filename = str(uuid.uuid4())
 
 
 def simulate_policy(args):
-    data = joblib.load(args.file)
+    data = joblib.load(args.file) # Pickle is internally used using joblib
     policy = data['policy']
     env = data['env']
     print("Policy loaded")
